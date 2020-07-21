@@ -13,10 +13,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var userInputTextView: UITextView!
     
+    
+    @IBOutlet weak var outputTextView: UITextView!
+    
+    
     @IBAction func flipButton(_ sender: Any) {
         var model = Model()
         var userInput = userInputTextView.text!
-        userInputTextView.text = model.turnUpsideDown(userInput)
+        outputTextView.text = model.turnUpsideDown(userInput)
 
     }
     

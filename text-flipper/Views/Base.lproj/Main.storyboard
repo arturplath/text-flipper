@@ -35,13 +35,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRG-nj-6fu">
-                                <rect key="frame" x="20" y="812" width="374" height="30"/>
-                                <state key="normal" title="Flip!"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRG-nj-6fu">
+                                <rect key="frame" x="20" y="464" width="374" height="22"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Flip!" image="arrow.2.circlepath" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="flipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EAT-76-T3o"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pwt-dn-Cga">
+                                <rect key="frame" x="20" y="506" width="374" height="336"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -49,16 +60,21 @@
                             <constraint firstItem="qRG-nj-6fu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1To-cS-094"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZq-AH-1Nx" secondAttribute="trailing" constant="20" id="Edd-cs-vsk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cVB-7d-dLG" secondAttribute="trailing" constant="20" id="GAg-o8-DA5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pwt-dn-Cga" secondAttribute="bottom" constant="20" id="Vga-WX-bET"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pwt-dn-Cga" secondAttribute="trailing" constant="20" id="YnI-yy-GB9"/>
+                            <constraint firstItem="qRG-nj-6fu" firstAttribute="top" secondItem="cVB-7d-dLG" secondAttribute="bottom" constant="20" id="aZ7-VS-wGq"/>
                             <constraint firstItem="qZq-AH-1Nx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f2F-LN-MHi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qRG-nj-6fu" secondAttribute="trailing" constant="20" id="kJX-4v-d4M"/>
+                            <constraint firstItem="pwt-dn-Cga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nx0-VR-mT2"/>
+                            <constraint firstItem="pwt-dn-Cga" firstAttribute="top" secondItem="qRG-nj-6fu" secondAttribute="bottom" constant="20" id="qSR-mS-kBj"/>
                             <constraint firstItem="qZq-AH-1Nx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qgj-lx-Wff"/>
                             <constraint firstItem="cVB-7d-dLG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qjK-70-FuU"/>
                             <constraint firstItem="cVB-7d-dLG" firstAttribute="top" secondItem="qZq-AH-1Nx" secondAttribute="bottom" constant="20" id="waa-56-KZk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qRG-nj-6fu" secondAttribute="bottom" constant="20" id="yZC-TV-uUM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="outputTextView" destination="pwt-dn-Cga" id="B3s-Cj-67V"/>
                         <outlet property="userInputTextView" destination="cVB-7d-dLG" id="tSo-kN-sd5"/>
                     </connections>
                 </viewController>
@@ -67,4 +83,7 @@
             <point key="canvasLocation" x="132" y="119"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.2.circlepath" catalog="system" width="128" height="101"/>
+    </resources>
 </document>
