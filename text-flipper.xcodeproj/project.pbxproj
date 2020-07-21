@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A230E0C24C74D96007CA160 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A230E0B24C74D96007CA160 /* Constants.swift */; };
+		5A230E1224C78E87007CA160 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A230E1124C78E87007CA160 /* Model.swift */; };
 		5AE3E9A724C59A1500EEFE55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3E9A624C59A1500EEFE55 /* AppDelegate.swift */; };
 		5AE3E9A924C59A1500EEFE55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3E9A824C59A1500EEFE55 /* SceneDelegate.swift */; };
 		5AE3E9AB24C59A1500EEFE55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3E9AA24C59A1500EEFE55 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A230E0B24C74D96007CA160 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5A230E1124C78E87007CA160 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5AE3E9A324C59A1500EEFE55 /* text-flipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "text-flipper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE3E9A624C59A1500EEFE55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE3E9A824C59A1500EEFE55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A230E0D24C74E35007CA160 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A230E1124C78E87007CA160 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A230E0E24C74E48007CA160 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AE3E9AC24C59A1500EEFE55 /* Main.storyboard */,
+				5AE3E9B124C59A1600EEFE55 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A230E0F24C74E63007CA160 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AE3E9AA24C59A1500EEFE55 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A230E1024C74E7E007CA160 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5A230E0B24C74D96007CA160 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		5AE3E99A24C59A1500EEFE55 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +95,12 @@
 			children = (
 				5AE3E9A624C59A1500EEFE55 /* AppDelegate.swift */,
 				5AE3E9A824C59A1500EEFE55 /* SceneDelegate.swift */,
-				5AE3E9AA24C59A1500EEFE55 /* ViewController.swift */,
-				5AE3E9AC24C59A1500EEFE55 /* Main.storyboard */,
-				5AE3E9AF24C59A1600EEFE55 /* Assets.xcassets */,
-				5AE3E9B124C59A1600EEFE55 /* LaunchScreen.storyboard */,
+				5A230E0D24C74E35007CA160 /* Models */,
+				5A230E0E24C74E48007CA160 /* Views */,
+				5A230E0F24C74E63007CA160 /* Controllers */,
+				5A230E1024C74E7E007CA160 /* Helpers */,
 				5AE3E9B424C59A1600EEFE55 /* Info.plist */,
+				5AE3E9AF24C59A1600EEFE55 /* Assets.xcassets */,
 			);
 			path = "text-flipper";
 			sourceTree = "<group>";
@@ -138,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A230E1224C78E87007CA160 /* Model.swift in Sources */,
 				5AE3E9AB24C59A1500EEFE55 /* ViewController.swift in Sources */,
 				5AE3E9A724C59A1500EEFE55 /* AppDelegate.swift in Sources */,
 				5AE3E9A924C59A1500EEFE55 /* SceneDelegate.swift in Sources */,
+				5A230E0C24C74D96007CA160 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
