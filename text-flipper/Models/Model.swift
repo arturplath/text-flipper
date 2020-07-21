@@ -15,6 +15,10 @@ class Model {
         let userInputArray = Array(userInput)
         var flippedText:[Character] = []
         
+        if (userInputArray.isEmpty == true) {
+            return ""
+        }
+        
         for i in 0 ... userInputArray.count - 1 {
             let characterFromUserInput = userInputArray[i]
             let indexFromUserInput = Constants.normalCharacters.firstIndex(of: characterFromUserInput)!

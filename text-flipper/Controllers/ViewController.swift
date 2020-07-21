@@ -18,14 +18,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func flipButton(_ sender: Any) {
-        var model = Model()
-        var userInput = userInputTextView.text!
+        let model = Model()
+        let userInput = userInputTextView.text!
         outputTextView.text = model.turnUpsideDown(userInput)
-
+    }
+    
+    
+    @IBAction func copyToClipboardButton(_ sender: Any) {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = outputTextView.text!
+    }
+    
+    @IBAction func shareButton(_ sender: Any) {
+        let items = [outputTextView.text!]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
 
     }
