@@ -11,10 +11,12 @@ import Foundation
 
 class Model {
     
+    // Function that replace "normal" characters with upside down characters
     func turnUpsideDown(_ userInput:String) -> String? {
         let userInputArray = Array(userInput)
         var flippedText:[Character] = []
         
+        // Stopping function when user try to flip nothing
         if (userInputArray.isEmpty == true) {
             return ""
         }
@@ -22,15 +24,13 @@ class Model {
         for i in 0 ... userInputArray.count - 1 {
             let characterFromUserInput = userInputArray[i]
             
+            // Checking whether user used character that does not exist in app's dictionary
             if let indexFromUserInput = Constants.normalCharacters.firstIndex(of: characterFromUserInput) {
                             flippedText.append(Constants.flippedCharacters[indexFromUserInput])
             }
             else {
                 flippedText.append(contentsOf: "")
             }
-            
-
-
         }
         return String(flippedText.reversed())
     }
