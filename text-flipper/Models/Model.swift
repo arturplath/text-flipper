@@ -21,10 +21,15 @@ class Model {
         
         for i in 0 ... userInputArray.count - 1 {
             let characterFromUserInput = userInputArray[i]
-            let indexFromUserInput = Constants.normalCharacters.firstIndex(of: characterFromUserInput)!
             
+            if let indexFromUserInput = Constants.normalCharacters.firstIndex(of: characterFromUserInput) {
+                            flippedText.append(Constants.flippedCharacters[indexFromUserInput])
+            }
+            else {
+                flippedText.append(contentsOf: "")
+            }
             
-            flippedText.append(Constants.flippedCharacters[indexFromUserInput])
+
 
         }
         return String(flippedText.reversed())
