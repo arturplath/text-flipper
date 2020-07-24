@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
     
     @IBOutlet weak var userInputTextView: UITextView!
@@ -21,26 +21,30 @@ class ViewController: UIViewController {
         let model = Model()
         let userInput = userInputTextView.text!
         outputTextView.text = model.turnUpsideDown(userInput)
+        dismissMyKeyboard()
     }
     
     
     @IBAction func copyToClipboardButton(_ sender: Any) {
         let pasteboard = UIPasteboard.general
         pasteboard.string = outputTextView.text!
+        dismissMyKeyboard()
     }
+    
     
     @IBAction func shareButton(_ sender: Any) {
         let items = [outputTextView.text!]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
+        dismissMyKeyboard()
     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeHideKeyboard()
-
-        
-
     }
 }
 
@@ -58,3 +62,7 @@ view.addGestureRecognizer(tap)
 view.endEditing(true)
 }
 }
+
+
+
+
