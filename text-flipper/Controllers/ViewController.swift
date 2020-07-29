@@ -50,16 +50,14 @@ class ViewController: UIViewController, UITextViewDelegate {
 
 extension ViewController {
 func initializeHideKeyboard() {
-// Declaring tap gesture to trigger hiding keyboard function
-let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-target: self,
-action: #selector(dismissMyKeyboard))
-view.addGestureRecognizer(tap)
+    // Declaring tap gesture to trigger hiding keyboard function
+    let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissMyKeyboard))
+    view.addGestureRecognizer(tap)
 }
     
 @objc func dismissMyKeyboard() {
 // Dismissing the active keyboard.
-view.endEditing(true)
+view.endEditing(false)
 }
 }
 
